@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="APP">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Wars</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/sw_ico2.png"/>
+    <link rel="stylesheet" type="text/css" href="estilos/style.css">
+    <script src="https://code.angularjs.org/1.3.5/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="IndexCtrl">
+  <div class="sound">
+    <span class="base_sound" id="base_sound" onClick="togglePlay()">
+      <img id="img_sound" src="" alt="TurnON">
+    </span> 
+    <audio loop id="base" src="audio/Star_Wars_Soundtrack.mp3"></audio> 
+  </div> 
+  <div class="logo-content">
+      <img src="img/imperial_logo.png" alt="Star Wars">
+      <img src="img/Logo.png" alt="Star Wars">
+      <img src="img/rebels_logo.png" alt="Star Wars">
+  </div>
+  <div class="main-content">
+    <div class="film-conteiner">
+      <div><img src="img/new_hope.jpg" alt="Star Wars" width="100%" height="100%"></div>
+      <div><img src="img/TheEmpireStrikesBack.jpg" alt="Star Wars" width="100%" height="100%"></div>
+      <div><img src="img/ReturnoftheJedi.jpg" alt="Star Wars" width="100%" height="100%"></div>
+      <div><img src="img/ThePhantomMenace.jpg" alt="Star Wars" width="100%" height="100%"></div>      
+    </div>
+  </div>
+  <script>
+    var APP = angular.module('APP', []) 
+		APP.controller('IndexCtrl', function ($scope, $http) {
+			 $http.get('https://swapi.co/api/films/1/?format=json')
+			 .success(function(result) {
+				$scope.films = result;
+				console.log('sucesso!');
+				 console.log(result);
+			 });			
+		});	
+  </script>
+  <script type="text/javascript" src="js/sound.js"></script>
+</body>
+</html>
