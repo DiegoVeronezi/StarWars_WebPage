@@ -48,9 +48,14 @@ body {
 
 .film-conteiner > div {
   margin-right: 10px;
-  height: 450px;
+  height: 35em;
   width: 22%;
   padding: 8px;
   border-radius: 3px;
-  background-color: #816107;
+  background-color: #ffffffd7;
+}
+
+.film-conteiner > div:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 5px 5px #8d7f00;
 }
