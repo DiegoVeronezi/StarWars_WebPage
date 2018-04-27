@@ -8,6 +8,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/sw_ico2.png"/>
     <link rel="stylesheet" type="text/css" href="styles/home.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
     <script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
 </head>
 <body ng-controller="IndexCtrl">
@@ -15,9 +16,9 @@
     <div class="sound">
       <span class="base_sound" id="base_sound" onClick="togglePlay()">
         <img id="img_sound" src="" alt="TurnON">
-      </span> 
-      <audio loop id="base" src="audio/Star_Wars_Soundtrack.mp3"></audio> 
-    </div> 
+      </span>
+      <audio loop id="base" src="audio/Star_Wars_Soundtrack.mp3"></audio>
+    </div>
     <div class="logo-content">
       <img src="img/imperial_logo.png" alt="Star Wars">
       <img src="img/Logo.png" alt="Star Wars">
@@ -27,16 +28,58 @@
   <section>
     <div class="main-content">
       <div class="film-conteiner">
-        <div><img src="img/new_hope.jpg" alt="Star Wars"></div>
-        <div><img src="img/TheEmpireStrikesBack.jpg" alt="Star Wars"></div>
-        <div><img src="img/ReturnoftheJedi.jpg" alt="Star Wars"></div>
-        <div><img src="img/ThePhantomMenace.jpg" alt="Star Wars"></div>
-        <div><img src="img/AttackOfTheClones.jpg" alt="Star Wars"></div>
-        <div><img src="img/RevengeOfTheSith.jpg" alt="Star Wars"></div>
-        <div><img src="img/TheForceAwakens.jpg" alt="Star Wars"></div>
+        <div>
+          <figure><img src="img/new_hope.jpg" alt="A New Hope"></figure>
+          <div class="film-title">
+            <h3>A New Hope</h3>
+          </div>
+        </div>
+        <div>
+          <figure><img src="img/TheEmpireStrikesBack.jpg" alt="Star Wars"></figure>
+          <div class="film-title">
+            <h3>The Empire Strikes Back</h3>
+          </div>
+        </div>
+        <div>
+          <figure><img src="img/ReturnoftheJedi.jpg" alt="Star Wars"></figure>
+          <div class="film-title">
+            <h3>Return Of The Jedi</h3>
+          </div>
+        </div>
+        <div>
+          <figure><img src="img/ThePhantomMenace.jpg" alt="Star Wars"></figure>
+          <div class="film-title">
+            <h3>The Phantom Menace</h3>
+          </div>
+        </div>
+        <div>
+          <figure><img src="img/AttackOfTheClones.jpg" alt="Star Wars"></figure>
+          <div class="film-title">
+            <h3>Attack Of The Clones</h3>
+          </div>
+        </div>
+        <div>
+          <figure><img src="img/RevengeOfTheSith.jpg" alt="Star Wars"></figure>
+          <div class="film-title">
+            <h3>Revenge Of The Sith</h3>
+          </div>
+        </div>
+        <div>
+          <figure><img src="img/TheForceAwakens.jpg" alt="Star Wars"></figure>
+          <div class="film-title">
+            <h3>The Force Awakens</h3>
+          </div>
+        </div>
       </div>
     </div>
-  </section>  
+  </section>
+  <footer>
+    <div class="informations">
+      <div class="icon-content">
+        <i class="fab fa-github git"></i>
+      </div>
+    </div>
+  </footer>
   <script type="text/javascript" src="js/sound.js"></script>
 </body>
 </html>
