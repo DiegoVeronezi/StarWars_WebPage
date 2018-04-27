@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="APP">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Wars A New Hope</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/sw_ico2.png"/>
+    <link rel="stylesheet" type="text/css" href="styles/home.css">
+    <link rel="stylesheet" type="text/css" href="styles/aNewHope.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300" rel="stylesheet">    
+    <script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body ng-controller="IndexCtrl">
+  <header>
+    <div class="sound">
+      <span class="base_sound" id="base_sound" onClick="togglePlay()">
+        <img id="img_sound" src="" alt="TurnON">
+      </span> 
+      <audio loop id="base" src="audio/Star_Wars_Soundtrack.mp3"></audio> 
+    </div> 
+    <div class="logo-content">
+      <img src="img/imperial_logo.png" alt="Star Wars">
+      <img src="img/Logo.png" alt="Star Wars">
+      <img src="img/rebels_logo.png" alt="Star Wars">
+    </div>
+  </header>
+  <section>
+   <div class="description">
+     {{ film1.data.opening_crawl }}
+   </div>
+   <div class="actors">
+     <nav>
+       <div class="nav nav-tabs" id="nav-tab" role="tablist">
+         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Characters</a>
+         <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">...</a>
+         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">...</a>
+       </div>
+     </nav>
+     <div class="tab-content" id="nav-tabContent">
+       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+         <div class="card">
+            <div class="img-content">
+              <img class="card-img-top" src="img/luke_skywalker.png" alt="Card image cap"> 
+            </div>  
+           <div class="card-body">
+             <ul class="card-text">
+               <li>Name: {{ person1.data.name }}</li>
+               <li>Gender: {{ person1.data.gender }}</li>
+               <li>Height: {{ person1.data.height }}</li>
+               <li>Mass: {{ person1.data.mass}}</li>
+             </ul>
+           </div>
+         </div>
+         <div class="card">
+           <div class="img-content">
+             <img class="card-img-top" src="img/darth_vader.jpg" alt="Card image cap"> 
+           </div>           
+           <div class="card-body">
+             <ul class="card-text">
+               <li>Name: {{ person2.data.name }}</li>
+               <li>Gender: {{ person2.data.gender }}</li>
+               <li>Height: {{ person2.data.height }}</li>
+               <li>Mass: {{ person2.data.mass}}</li>
+             </ul>
+           </div>
+         </div>
+       </div>
+       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        
+       </div>
+       <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+     </div> 
+   </div>
+  </section>  
+  <script src="app.js"></script>
+  <script src="controler/ctrl_NewHope.js"></script>
+  <script type="text/javascript" src="js/sound.js"></script>
+</body>
+</html>

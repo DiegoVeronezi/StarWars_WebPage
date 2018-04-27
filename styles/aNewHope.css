@@ -1,0 +1,69 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aquamarine; */
+}
+
+.description {
+  background-color: #414141c2;
+  color: #d4ad00b6;
+  height: 280px;
+  width: 70%;
+  border-radius: 10px;
+  border: 2px solid #ffffffcb;
+  font-size: 2em;
+  text-align: center;
+  padding: 30px 80px;
+  overflow-y: scroll;
+}
+
+.actors {
+  /* background-color: aqua; */
+  height: 440px;
+  width: 70%;
+}
+
+nav {
+  margin-top: 100px;
+}
+
+#nav-tab {
+  border-bottom: none;
+}
+
+.tab-content {
+  background-color: #414141c2;
+  border-radius: 0px 5px 5px 5px;
+  border: 1px solid #0e0035c5;
+  box-sizing: border-box;
+  padding: 70px 20px;
+}
+
+#nav-home {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  margin-right: 10px;
+}
+
+.img-content{
+  height: 330px;
+  background-color: black;
+}
+
+.img-content > img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-text {
+ text-decoration-style: none;
+ list-style: none;
+ color: black;
+}

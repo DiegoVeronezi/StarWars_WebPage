@@ -13,16 +13,11 @@ body {
 }
 
 header {
-  /* background-image: url(/img/sw_background.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover; */
   background-color: #000000;
   padding: 50px 10px;
   position: relative;
   border-bottom: 10px solid #1b025f;
-  margin-bottom: 130px;
+  margin-bottom: 160px;
 }
 
 .logo-content{
@@ -48,11 +43,11 @@ h1 {
   font-size: 3em;
   text-align: center;
   font-weight: 200;
+  color: #ffffff;
 }
 
 .main-content {
   margin-bottom: 100px;
-  border: 1px solid red;
   display: flex;
   justify-content: center;
 }
@@ -61,7 +56,6 @@ h1 {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  border: 1px solid rgb(202, 65, 65);
   width: 95%;
 }
 
@@ -70,11 +64,14 @@ h1 {
   width: 14.28%;
   padding-bottom: 60px;
   background-color: black;
+  position: relative;
 }
 
 .film-conteiner > div:hover {
   transform: scale(1.03);
-  box-shadow: 0px 0px 5px 5px #8d7f00;
+  filter: brightness(0.5);
+  z-index: 3;
+  transition: 0.4s;
 }
 
 .film-conteiner > div > img {
