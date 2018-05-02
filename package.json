@@ -4,10 +4,7 @@
   "description": "Página Web contendo informações da saga Star Wars através de uma Api",
   "main": "index.js",
   "dependencies": {
-    "angular": "^1.6.10",
-    "bootstrap": "^4.0.0-beta.2",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.3"
+    "angular": "^1.6.10"
   },
   "devDependencies": {},
   "scripts": {
