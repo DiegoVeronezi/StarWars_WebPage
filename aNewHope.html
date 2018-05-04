@@ -8,7 +8,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/sw_ico2.png"/>
     <link rel="stylesheet" type="text/css" href="styles/home.css">
     <link rel="stylesheet" type="text/css" href="styles/aNewHope.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300" rel="stylesheet">
     <script src="https://code.angularjs.org/1.6.4/angular.min.js"></script>
 </head>
 <body ng-controller="IndexCtrl">
@@ -16,9 +16,9 @@
     <div class="sound">
       <span class="base_sound" id="base_sound" onClick="togglePlay()">
         <img id="img_sound" src="" alt="TurnON">
-      </span> 
-      <audio loop id="base" src="audio/Star_Wars_Soundtrack.mp3"></audio> 
-    </div> 
+      </span>
+      <audio loop id="base" src="audio/Star_Wars_Soundtrack.mp3"></audio>
+    </div>
     <div class="logo-content">
       <img src="img/imperial_logo.png" alt="Star Wars">
       <img src="img/Logo.png" alt="Star Wars">
@@ -32,25 +32,25 @@
    </div>
    <h1 class="title">Characters:</h1>
    <div class="actors">
-    <div class="card" ng-repeat="op in person"> 
+    <div class="card" ng-repeat="person in persons">
       <div class="name" >
-        <h1>{{ op.data.name }}</h1>
+        <h1>{{ person.data.name }}</h1>
       </div>
       <div class="info">
         <ul>
-          <li><h3>Birth Year:</h3><p>{{ op.data.birth_year }}</p></li>
-          <li><h3>Height:</h3><p>{{ op.data.height }}</p></li>
-          <li><h3>Gender:</h3><p>{{ op.data.gender }}</p></li>
-          <li><h3>Hair Color:</h3><p>{{ op.data.hair_color }}</p></li>
-          <li><h3>Mass:</h3><p>{{ op.data.mass }}</p></li>
-          <li><h3>Eye Color:</h3><p>{{ op.data.eye_color }}</p></li>
-          <li><h3>Skin Color:</h3><p>{{ op.data.skin_color }}</p></li>
-          <li><h3>Num Films:</h3><p>{{ op.data.films.length }}</p></li>
+          <li><h3>Birth Year:</h3><p>{{ person.data.birth_year }}</p></li>
+          <li><h3>Height:</h3><p>{{ person.data.height }}</p></li>
+          <li><h3>Gender:</h3><p>{{ person.data.gender }}</p></li>
+          <li><h3>Hair Color:</h3><p>{{ person.data.hair_color }}</p></li>
+          <li><h3>Mass:</h3><p>{{ person.data.mass }}</p></li>
+          <li><h3>Eye Color:</h3><p>{{ person.data.eye_color }}</p></li>
+          <li><h3>Skin Color:</h3><p>{{ person.data.skin_color }}</p></li>
+          <li><h3>Num Films:</h3><p>{{ person.data.films.length }}</p></li>
         </ul>
       </div>
     </div>
    </div>
-  </section>  
+  </section>
   <script src="app.js"></script>
   <script src="controler/ctrl_NewHope.js"></script>
   <script type="text/javascript" src="js/sound.js"></script>
