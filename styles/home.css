@@ -9,7 +9,6 @@
 }
 ::-webkit-scrollbar-thumb {
   background: #414141fa;
-  border-radius: 15px;
 }
 
 body {
@@ -25,7 +24,7 @@ header {
   background-color: #000000;
   padding: 50px 10px;
   position: relative;
-  border-bottom: 10px solid #281531;
+  border-bottom: 10px solid #120718;
   margin-bottom: 200px;
   box-shadow: 0px 1px 5px #2c2c2c;
 }

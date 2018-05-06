@@ -1,6 +1,12 @@
 APP.controller('IndexCtrl', function ($scope, $http) {
   $scope.persons = [];
+  $scope.starships = [];
+  $scope.planets = [];
+  $scope.vehicles = [];
   let x = 0;
+  let y = 0;
+  let z = 0;
+  let k = 0;
   $http({
     method: 'GET',
     url: 'https://swapi.co/api/films/'
@@ -31,7 +37,53 @@ APP.controller('IndexCtrl', function ($scope, $http) {
       });
   }
 
+  function callApiForStarships(id) {
+    $http({
+      method: 'GET',
+      url: 'https://swapi.co/api/starships/' + id + '/',
+      }).then(function successCallback(response) {
+         $scope.starships[y] = response;
+         y = y + 1;
+        // this callback will be called asynchronously
+        // when the response is available
+      }, function errorCallback(response) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
+  }
 
+  function callApiForPlanets(id) {
+    $http({
+      method: 'GET',
+      url: 'https://swapi.co/api/planets/' + id + '/',
+      }).then(function successCallback(response) {
+         $scope.planets[z] = response;
+         z = z + 1;
+        // this callback will be called asynchronously
+        // when the response is available
+      }, function errorCallback(response) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
+  }
+
+  function callApiForVehicles(id) {
+    $http({
+      method: 'GET',
+      url: 'https://swapi.co/api/vehicles/' + id + '/',
+      }).then(function successCallback(response) {
+         $scope.vehicles[k] = response;
+         k = k + 1;
+         console.log($scope.vehicles[0]);
+        // this callback will be called asynchronously
+        // when the response is available
+      }, function errorCallback(response) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
+  }
+
+  
   callApiForPeople(1);
   callApiForPeople(2);
   callApiForPeople(3);
@@ -51,12 +103,22 @@ APP.controller('IndexCtrl', function ($scope, $http) {
   callApiForPeople(19);
   callApiForPeople(81);
 
-  // function getCharacters() {
-  //   for (let i = 1; i < 5; i++) {
-  //     callApiForPeople(i);
-  //   }
-  // }
+  callApiForStarships(2);
+  callApiForStarships(3);
+  callApiForStarships(5);
+  callApiForStarships(9);  
+  callApiForStarships(10);
+  callApiForStarships(11);
+  callApiForStarships(12);
+  callApiForStarships(13);
 
-  // getCharacters();
+  callApiForPlanets(1);
+  callApiForPlanets(2);
+  callApiForPlanets(3);
+
+  callApiForVehicles(4);
+  callApiForVehicles(6);
+  callApiForVehicles(7);
+  callApiForVehicles(8);
 
 });

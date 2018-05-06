@@ -7,16 +7,15 @@ section {
 }
 
 .description {
-  background-color: #414141c2;
+  background-color: #414141a1;
   color: #d4ad00b6;
-  height: 280px;
-  width: 70%;
-  border-radius: 10px;
-  border: 2px solid #ffffffcb;
+  width: 100%;
+  border-top: 2px solid #ffffffcb;
+  border-bottom: 1px solid #ffffffcb;
   font-size: 2.5em;
   text-align: center;
-  padding: 30px 80px;
-  overflow-y: scroll;
+  box-sizing: border-box;
+  padding: 35px 120px;
   margin-bottom: 100px;
 }
 
@@ -24,15 +23,46 @@ section {
   font-size: 4rem;
   text-transform: uppercase;
   text-shadow: 2px 5px 5px black;
+  margin-bottom: 10px;
 }
 
-.actors {
-  /* background-color: aqua; */
+.main {
+  font-size: 4.4rem;
+}
+
+.container#justify {
+  height: auto;
+}
+
+#justify > .content {
+  overflow: hidden;
+}
+
+.container {
+  height: 700px;
+  width: 100%;
+  background-color: #414141a1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+  box-shadow: 0px 0px 4px 1px #2c2c2c;
+}
+
+.content {
+  height: auto;
   width: 70%;
+  overflow-y: scroll;
   padding: 30px 80px;
-  border: 1px solid #ffffffcb;
-  border-radius: 10px;
   background-color: #414141c2;
+  border-left: 3px solid #120718;
+}
+
+.content::-webkit-scrollbar {
+  background: #c5c5c5;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: #747474;
 }
 
 .card {
@@ -50,6 +80,10 @@ section {
 .card:last-child {
   border-radius: 0px 0px 5px 5px;
 }
+
+/* .card:nth-child(even) {
+  background-color: #d1d1d1f5;
+} */
 
 .name {
   display: flex;

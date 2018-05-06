@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Star Wars A New Hope</title>
+    <title>Star Wars: A New Hope</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/sw_ico2.png"/>
     <link rel="stylesheet" type="text/css" href="styles/home.css">
     <link rel="stylesheet" type="text/css" href="styles/aNewHope.css">
@@ -26,30 +26,96 @@
     </div>
   </header>
   <section>
-   <h1 class="title">Opening Crawl:</h1>
-   <div class="description">
-     {{ films0.opening_crawl }}
-   </div>
-   <h1 class="title">Characters:</h1>
-   <div class="actors">
-    <div class="card" ng-repeat="person in persons">
-      <div class="name" >
-        <h1>{{ person.data.name }}</h1>
-      </div>
-      <div class="info">
-        <ul>
-          <li><h3>Birth Year:</h3><p>{{ person.data.birth_year }}</p></li>
-          <li><h3>Height:</h3><p>{{ person.data.height }}</p></li>
-          <li><h3>Gender:</h3><p>{{ person.data.gender }}</p></li>
-          <li><h3>Hair Color:</h3><p>{{ person.data.hair_color }}</p></li>
-          <li><h3>Mass:</h3><p>{{ person.data.mass }}</p></li>
-          <li><h3>Eye Color:</h3><p>{{ person.data.eye_color }}</p></li>
-          <li><h3>Skin Color:</h3><p>{{ person.data.skin_color }}</p></li>
-          <li><h3>Num Films:</h3><p>{{ person.data.films.length }}</p></li>
-        </ul>
+    <h1 class="title main">Opening Crawl:</h1>
+    <div class="description">
+      {{ films0.opening_crawl }}
+    </div>
+    <h1 class="title">Characters</h1>
+    <div class="container">
+      <div class="content">
+        <div class="card" ng-repeat="person in persons">
+          <div class="name" >
+            <h1>{{ person.data.name }}</h1>
+          </div>
+          <div class="info">
+            <ul>
+              <li><h3>Birth Year:</h3><p>{{ person.data.birth_year }}</p></li>
+              <li><h3>Height:</h3><p>{{ person.data.height }}</p></li>
+              <li><h3>Gender:</h3><p>{{ person.data.gender }}</p></li>
+              <li><h3>Hair Color:</h3><p>{{ person.data.hair_color }}</p></li>
+              <li><h3>Mass:</h3><p>{{ person.data.mass }}</p></li>
+              <li><h3>Eye Color:</h3><p>{{ person.data.eye_color }}</p></li>
+              <li><h3>Skin Color:</h3><p>{{ person.data.skin_color }}</p></li>
+              <li><h3>Num Films:</h3><p>{{ person.data.films.length }}</p></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-   </div>
+    <h1 class="title">Starships</h1>
+    <div class="container">
+      <div class="content">
+        <div class="card" ng-repeat="starship in starships">
+          <div class="name" >
+            <h1>{{ starship.data.name }}</h1>
+          </div>
+          <div class="info">
+            <ul>
+              <li><h3>Model:</h3><p>{{ starship.data.model }}</p></li>
+              <li><h3>Max Atmosphering Speed:</h3><p>{{ starship.data.max_atmosphering_speed }}</p></li>
+              <li><h3>Length:</h3><p>{{ starship.data.length }}</p></li>
+              <li><h3>MGLT:</h3><p>{{ starship.data.MGLT }}</p></li>
+              <li><h3>Cargo Capacity:</h3><p>{{ starship.data.cargo_capacity }}</p></li>
+              <li><h3>Crew:</h3><p>{{ starship.data.crew }}</p></li>
+              <li><h3>Hyperdrive Rating:</h3><p>{{ starship.data.hyperdrive_rating }}</p></li>
+              <li><h3>Manufacturer:</h3><p>{{ starship.data.manufacturer }}</p></li>
+              <li><h3>Starship Class:</h3><p>{{ starship.data.starship_class }}</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="title">Planets</h1>
+    <div class="container" id="justify">
+      <div class="content">
+      <div class="card" ng-repeat="planet in planets">
+        <div class="name" >
+          <h1>{{ planet.data.name }}</h1>
+        </div>
+        <div class="info">
+          <ul>
+            <li><h3>Climate:</h3><p>{{ planet.data.climate }}</p></li>
+            <li><h3>Diameter:</h3><p>{{ planet.data.diameter }}</p></li>
+            <li><h3>Terrain:</h3><p>{{ planet.data.terrain }}</p></li>
+            <li><h3>Orbital Period:</h3><p>{{ planet.data.orbital_period }}</p></li>
+            <li><h3>Population:</h3><p>{{ planet.data.population }}</p></li>
+            <li><h3>Gravity:</h3><p>{{ planet.data.gravity }}</p></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+    <h1 class="title">Vehicles</h1>
+    <div class="container" id="justify">
+      <div class="content">
+        <div class="card" ng-repeat="vehicle in vehicles">
+          <div class="name" >
+            <h1>{{ vehicle.data.name }}</h1>
+          </div>
+          <div class="info">
+            <ul>
+              <li><h3>Model:</h3><p>{{ vehicle.data.model }}</p></li>
+              <li><h3>Max Atmosphering Speed:</h3><p>{{ vehicle.data.max_atmosphering_speed }}</p></li>
+              <li><h3>Length:</h3><p>{{ vehicle.data.length }}</p></li>
+              <li><h3>Cargo Capacity:</h3><p>{{ vehicle.data.cargo_capacity }}</p></li>
+              <li><h3>Crew:</h3><p>{{ vehicle.data.crew }}</p></li>
+              <li><h3>Manufacturer:</h3><p>{{ vehicle.data.manufacturer }}</p></li>
+              <li><h3>Vehicle Class:</h3><p>{{ vehicle.data.vehicle_class }}</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <script src="app.js"></script>
   <script src="controler/ctrl_NewHope.js"></script>
